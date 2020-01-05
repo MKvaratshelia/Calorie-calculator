@@ -1,0 +1,91 @@
+body {
+  background-color: #000;
+}
+.header {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-family: Roboto;
+  line-height: 32px;
+}
+.content {
+  width: 100%;
+  margin: auto;
+  color: white;
+  display: flex;
+  justify-content: center;
+  font-family: Roboto;
+  font-weight: normal;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form__input-container {
+  width: 90%;
+  font-family: Roboto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin: 20px 0 20px;
+}
+
+.form-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form__input {
+  width: 90%;
+  height: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+.form__input-list {
+  margin-top: 20px;
+  height: 30px;
+}
+.form__description {
+  width: 90%;
+  font-size: 18px;
+  margin: 20px 0 10px 0;
+}
+.form__button {
+  display: block;
+  height: 40px;
+  width: 90%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+.form-result__bm:disabled {
+  color: red;
+  font-weight: bold;
+}
+.form-result__total {
+  color: red;
+  font-weight: bold;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    background-color: black;
+    color: white;
+    
+}
+.footer__copyright {
+    font-family: Roboto;
+    font-size: 14px;
+    margin: 0;
+}

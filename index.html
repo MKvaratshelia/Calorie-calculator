@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Калькулятор каллорий</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">Калькулятор калорий</h1>
+    </header>
+    <section class="content">
+        <form action="" name="calculator" class="form">
+            <h3 class="form__description">Вес</h3>
+            <input name="weight" type="number" required max="150" class="form__input form__input_weight"
+                placeholder="вес в кг">
+            <h3 class="form__description">Рост</h3>
+            <input name="height" type="number" max="250" required class="form__input form__input_height"
+                placeholder="рост в см">
+            <h3 class="form__description">Возраст</h3>
+            <input name="age" type="number" max="100" required class="form__input form__input_age"
+                placeholder="ваш возраст">
+            <select required name="formList" class="form__input form__input-list">
+                <option value="" disabled selected>активность</option>
+                <option value="1.2" name="minimal" class="form__input">минимальная</option>
+                <option value="1.375" name="weak" class="form__input">слабая</option>
+                <option value="1.55" name="average" class="form__input">средняя</option>
+                <option value="1.72" name="high" class="form__input">высокая</option>
+                <option value="1.9" name="extra" class="form__input">экстра</option>
+            </select>
+            <div class="form__input-container">
+                <label for="form__input_man">Мужчина</label>
+                <input type="radio" value="man" required name="gendor" class="form__input form__input_man">
+                <label for="form__input_woman">Женщина</label>
+                <input type="radio" value="wonam" required name="gendor" class="form__input form__input_woman">
+            </div>
+
+            <button type="submit" class="form__button">Расcчитать</button>
+        </form>
+        <form action="" name="result" class="form-result">
+            <h3 class="form__description">Основной обмен</h3>
+            <input name="bm" type="text" disabled class="form__input form-result__bm">
+            <h3 class="form__description">Итог</h3>
+            <input name="total" type="text" disabled class="form__input form-result__total">
+        </form>
+    </section>
+    <footer class="footer">
+        <p class="footer__copyright">&#169; М.К</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
