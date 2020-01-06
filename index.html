@@ -18,13 +18,13 @@
     <section class="content">
         <form action="" name="calculator" class="form">
             <h3 class="form__description">Вес</h3>
-            <input name="weight" type="number" required max="150" class="form__input form__input_weight"
+            <input name="weight" type="number" required min="40" max="150" class="form__input form__input_weight"
                 placeholder="вес в кг">
             <h3 class="form__description">Рост</h3>
-            <input name="height" type="number" max="250" required class="form__input form__input_height"
+            <input name="height" type="number" min="150" max="250" required class="form__input form__input_height"
                 placeholder="рост в см">
             <h3 class="form__description">Возраст</h3>
-            <input name="age" type="number" max="100" required class="form__input form__input_age"
+            <input name="age" type="number" min="18" max="100" required class="form__input form__input_age"
                 placeholder="ваш возраст">
             <select required name="formList" class="form__input form__input-list">
                 <option value="" disabled selected>активность</option>
@@ -36,9 +36,9 @@
             </select>
             <div class="form__input-container">
                 <label for="form__input_man">Мужчина</label>
-                <input type="radio" value="man" required name="gendor" class="form__input form__input_man">
+                <input type="radio" value="man" required name="gendor" class="form__input_man">
                 <label for="form__input_woman">Женщина</label>
-                <input type="radio" value="wonam" required name="gendor" class="form__input form__input_woman">
+                <input type="radio" value="wonam" required name="gendor" class="form__input_woman">
             </div>
 
             <button type="submit" class="form__button">Расcчитать</button>

@@ -46,9 +46,23 @@ body {
   text-align: center;
   border-radius: 10px;
 }
+.form__input:invalid {
+  border: 2px solid red;
+}
+.form__input:valid {
+  border: 2px solid green;
+}
 .form__input-list {
   margin-top: 20px;
   height: 30px;
+}
+.form__input-container input[type="radio"] {
+  width: 25px;
+  height: 25px;
+  border: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-sizing: border-box;
 }
 .form__description {
   width: 90%;
@@ -68,12 +82,16 @@ body {
   cursor: pointer;
   margin-bottom: 30px;
 }
-.form-result__bm:disabled {
-  color: red;
+.form__button:active {
+  background-color: green;
+  border: none;
+}
+.form-result__bm {
+  color: black;
   font-weight: bold;
 }
 .form-result__total {
-  color: red;
+  color: black;
   font-weight: bold;
 }
 .footer {
