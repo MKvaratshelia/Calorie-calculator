@@ -1,11 +1,11 @@
 body {
-  background-color: #000;
+  background-color: #FFFFF0	;
 }
 .header {
   width: 90%;
   margin: auto;
   text-align: center;
-  color: white;
+  color: black;
   font-weight: bold;
   font-family: Roboto;
   line-height: 32px;
@@ -13,7 +13,7 @@ body {
 .content {
   width: 100%;
   margin: auto;
-  color: white;
+  color: black;
   display: flex;
   justify-content: center;
   font-family: Roboto;
@@ -40,17 +40,31 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.form-result__input {
+  height: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  background-color: #FFFFF0	;
+  color: black;
+  text-align: center;
+}
 .form__input {
   width: 90%;
-  height: 20px;
+  height: 30px;
   text-align: center;
-  border-radius: 10px;
+  border: none;
+  background-color: #FFFFF0;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .form__input:invalid {
-  border: 2px solid red;
+  border-bottom: 2px solid red;
 }
 .form__input:valid {
-  border: 2px solid green;
+  border-bottom: 2px solid #006400;
 }
 .form__input-list {
   margin-top: 20px;
@@ -66,9 +80,10 @@ body {
 }
 .form__description {
   width: 90%;
-  font-size: 18px;
+  font-size: 16px;
   margin: 20px 0 10px 0;
 }
+
 .form__button {
   display: block;
   height: 40px;
@@ -76,30 +91,23 @@ body {
   text-align: center;
   background-color: black;
   color: white;
-  border: 2px solid white;
   font-size: 20px;
   line-height: 24px;
   cursor: pointer;
   margin-bottom: 30px;
-}
-.form__button:active {
-  background-color: green;
   border: none;
 }
-.form-result__bm {
-  color: black;
-  font-weight: bold;
+.form__button:active {
+  background-color: #808000	;
+  border: none;
 }
-.form-result__total {
-  color: black;
-  font-weight: bold;
-}
+
 .footer {
+    padding-left: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     height: 30px;
-    background-color: black;
-    color: white;
+    color: black;
     
 }
 .footer__copyright {

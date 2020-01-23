@@ -28,11 +28,11 @@
                 placeholder="ваш возраст">
             <select required name="formList" class="form__input form__input-list">
                 <option value="" disabled selected>активность</option>
-                <option value="1.2" name="minimal" class="form__input">минимальная</option>
-                <option value="1.375" name="weak" class="form__input">слабая</option>
-                <option value="1.55" name="average" class="form__input">средняя</option>
-                <option value="1.72" name="high" class="form__input">высокая</option>
-                <option value="1.9" name="extra" class="form__input">экстра</option>
+                <option value="1.2" name="minimal" class="form__input">только лежу</option>
+                <option value="1.375" name="weak" class="form__input">хожу на работу</option>
+                <option value="1.55" name="average" class="form__input">2 тренировки в неделю</option>
+                <option value="1.72" name="high" class="form__input">4 тренировки в неделю</option>
+                <option value="1.9" name="extra" class="form__input">тренировки каждый день</option>
             </select>
             <div class="form__input-container">
                 <label for="form__input_man">Мужчина</label>
@@ -45,13 +45,17 @@
         </form>
         <form action="" name="result" class="form-result">
             <h3 class="form__description">Основной обмен</h3>
-            <input name="bm" type="text" disabled class="form__input form-result__bm">
-            <h3 class="form__description">Итог</h3>
-            <input name="total" type="text" disabled class="form__input form-result__total">
+            <input name="bm" type="text" disabled class="form-result__input form-result__bm">
+            <h3 class="form__description">Для поддержки</h3>
+            <input name="total" type="text" disabled class="form-result__input form-result__total">
+            <h3 class="form__description">Для похудения</h3>
+            <input name="slim" type="text" disabled class="form-result__input form-result__slim">
+            <h3 class="form__description">Для набора массы</h3>
+            <input name="mass" type="text" disabled class="form-result__input form-result__mass">
         </form>
     </section>
     <footer class="footer">
-        <p class="footer__copyright">&#169; М.К</p>
+        <p class="footer__copyright">&#169; М.К 2019</p>
     </footer>
 
     <script src="./script.js"></script>

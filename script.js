@@ -17,6 +17,8 @@ const formResult = document.forms.result;
 const formResultTotal = formResult.elements.total;
 const formResultBm = formResult.elements.bm;
 const formInputList = form.elements.formList;
+const formResultSlim = formResult.elements.slim;
+const formResultMass = formResult.elements.mass;
 
 const gendorRadio = document.getElementsByName("gendor");
 
@@ -45,7 +47,9 @@ function loadValue(bm) {
   let value = formInputList.value;
   let valueTotal = value * bm;
   formResultTotal.value = Math.round(valueTotal) + " ккал";
-  
+  formResultSlim.value = Math.round(valueTotal - 300) + " ккал";
+  formResultMass.value = Math.round(valueTotal + 300) + " ккал";
+
 }
 
 formInputList.addEventListener("change", loadValue);
