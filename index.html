@@ -45,14 +45,16 @@
             <button type="submit" class="form__button">Расcчитать</button>
         </form>
         <form action="" name="result" class="form-result">
-            <h3 class="form__description">Основной обмен</h3>
+            <label class="form-result__description form__description"">Основной обмен</label>
             <input name="bm" type="text" readonly placeholder="результат ккал" class="form-result__input form-result__bm">
-            <h3 class="form__description">Для поддержки</h3>
+            <label class="form-result__description form__description"">Для поддержки</label>
             <input name="total" type="text" readonly placeholder="результат ккал" class="form-result__input form-result__total">
-            <h3 class="form__description">Для похудения</h3>
+            <label class="form-result__description form__description"">Для похудения</label>
             <input name="slim" type="text" readonly placeholder="результат ккал" class="form-result__input form-result__slim">
-            <h3 class="form__description">Для набора веса</h3>
+            <label class="form-result__description form__description"">Для набора веса</label>
             <input name="mass" type="text" readonly placeholder="результат ккал" class="form-result__input form-result__mass">
+            <label for="form-result__input_bgu" class="form-result__description form__description">Примерное БЖУ в гр.</label>
+            <input name="pfc" type="text" readonly placeholder="БЖУ" class="form-result__input form-result__input_pfc">
         </form>
     </section>
     <footer class="footer">

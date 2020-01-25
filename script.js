@@ -19,10 +19,23 @@ const formResultBm = formResult.elements.bm;
 const formInputList = form.elements.formList;
 const formResultSlim = formResult.elements.slim;
 const formResultMass = formResult.elements.mass;
+const formResultPFC = formResult.elements.pfc;
 
 const gendorRadio = document.getElementsByName("gendor");
 
-function basicMetabolism(event) {
+function resultSlimandMass(result) {
+  formResultSlim.value = Math.round(result - 300) + " ккал";
+  formResultMass.value = Math.round(result + 300) + " ккал";
+}
+function pfc (bodyMass) {
+  const protein = bodyMass * 1.5;
+  const fat = bodyMass * 1;
+  const carbohydrates = bodyMass * 3;
+  formResultPFC.value = `Б ${protein}, Ж ${fat}, У ${carbohydrates}`;
+}
+
+function basicMetabolism() {
+  const value = formInputList.value
   formResult.reset();
   event.preventDefault();
   if (gendorRadio[0].checked) {
@@ -32,7 +45,10 @@ function basicMetabolism(event) {
       4.8 * formInputHeight.value -
       5.7 * formInputAge.value;
     formResultBm.value = Math.round(bmM) + " ккал";
-    loadValue(bmM);
+    const resultOne = value * bmM;
+    formResultTotal.value = Math.round(resultOne) + " ккал";
+    resultSlimandMass(resultOne);
+
   } else if (gendorRadio[1].checked) {
     const bmW =
       447.6 +
@@ -40,18 +56,15 @@ function basicMetabolism(event) {
       3.1 * formInputHeight.value -
       4.3 * formInputAge.value;
     formResultBm.value = Math.round(bmW) + " ккал";
-    loadValue(bmW);
+    //loadValue(bmW);
+    const resultTwo = value * bmW;
+    formResultTotal.value = Math.round(resultTwo) + " ккал";
+    resultSlimandMass(resultTwo);
   }
-}
-function loadValue(bm) {
-  let value = formInputList.value;
-  let valueTotal = value * bm;
-  formResultTotal.value = Math.round(valueTotal) + " ккал";
-  formResultSlim.value = Math.round(valueTotal - 300) + " ккал";
-  formResultMass.value = Math.round(valueTotal + 300) + " ккал";
-
+  pfc(formInputWeight.value);
 }
 
-formInputList.addEventListener("change", loadValue);
+
+//formInputList.addEventListener("change", loadValue);
 form.addEventListener("submit", basicMetabolism);
 

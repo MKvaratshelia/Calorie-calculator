@@ -77,6 +77,11 @@ body {
   color: black;
   text-align: center;
 }
+.form-result__input_pfc {
+  height: 55px;
+  font-size: 16px;
+}
+
 .form__input {
   width: 90%;
   height: 30px;
@@ -112,8 +117,10 @@ input[type="number"]::-webkit-inner-spin-button {
   box-sizing: border-box;
 }
 .form__description {
+  font-family: Roboto;
+  font-weight: bold;
   width: 90%;
-  font-size: 16px;
+  font-size: 14px;
   margin: 20px 0 10px 0;
 }
 
@@ -136,7 +143,6 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .footer {
-  padding-left: 20px;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: start;
@@ -145,6 +151,7 @@ input[type="number"]::-webkit-inner-spin-button {
   color: black;
 }
 .footer__copyright {
+  padding-left: 5px;
   font-family: Roboto;
   font-size: 14px;
   margin: 0;
