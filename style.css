@@ -1,5 +1,5 @@
 body {
-  background-color: #FFFFF0	;
+  background-color: #fffff0;
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -20,8 +20,10 @@ body {
   width: 100%;
   margin: auto;
   color: black;
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   font-family: Roboto;
   font-weight: normal;
 }
@@ -37,31 +39,42 @@ body {
   opacity: 0.3;
 }
 .form {
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
 }
 .form__input-container {
   width: 90%;
   font-family: Roboto;
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
   font-size: 12px;
   margin: 20px 0 20px;
 }
 
 .form-result {
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center;
 }
 .form-result__input {
   width: 90%;
   height: 30px;
   border: none;
   border-bottom: 2px solid black;
-  background-color: #FFFFF0	;
+  background-color: #fffff0;
   color: black;
   text-align: center;
 }
@@ -70,7 +83,7 @@ body {
   height: 30px;
   text-align: center;
   border: none;
-  background-color: #FFFFF0;
+  background-color: #fffff0;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -89,7 +102,7 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-top: 50px;
   border-bottom: 2px solid black;
   height: 30px;
-  background-color: #FFFFF0;
+  background-color: #fffff0;
 }
 .form__input-container input[type="radio"] {
   width: 25px;
@@ -119,20 +132,21 @@ input[type="number"]::-webkit-inner-spin-button {
   border: none;
 }
 .form__button:active {
-  background-color: #808000	;
+  background-color: #808000;
   border: none;
 }
 
 .footer {
-    padding-left: 20px;
-    display: flex;
-    justify-content: start;
-    height: 30px;
-    color: black;
-    
+  padding-left: 20px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: start;
+          justify-content: start;
+  height: 30px;
+  color: black;
 }
 .footer__copyright {
-    font-family: Roboto;
-    font-size: 14px;
-    margin: 0;
+  font-family: Roboto;
+  font-size: 14px;
+  margin: 0;
 }
